@@ -1,0 +1,22 @@
+{
+  "name": "node-booklet",
+  "version": "1.0.0",
+  "description": "Our Simple NodeJS application for the node booklet application",
+  "main": "server.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alchemist09/node-booklet.git"
+  },
+  "author": "alchemist09",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/alchemist09/node-booklet/issues"
+  },
+  "homepage": "https://github.com/alchemist09/node-booklet#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
