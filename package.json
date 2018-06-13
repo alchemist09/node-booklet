@@ -17,6 +17,11 @@
   },
   "homepage": "https://github.com/alchemist09/node-booklet#readme",
   "dependencies": {
-    "express": "^4.16.3"
+    "ejs": "^2.6.1",
+    "express": "^4.16.3",
+    "instagram-node": "^0.5.8"
+  },
+  "devDependencies": {
+    "dotenv": "^6.0.0"
   }
 }
