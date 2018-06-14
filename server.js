@@ -6,6 +6,9 @@ ig.use({
   access_token: process.env.MY_ACCESS_TOKEN
 });
 
+console.log(ig);
+console.log('ACCESS TOKEN: ' + process.env.MY_ACCESS_TOKEN);
+
 // tell node where to look for site resources
 app.use(express.static(__dirname + '/public'));
 
@@ -21,11 +24,14 @@ app.get('/', function(req, res) {
       'x-timestamp': Date.now(),
       'x-sent': true
     }
-  }
-  res.render('pages/index', options);
+  };
+  ig.user_self_media_recent(function(err, medias, pagination, remaining, limit){
+    res.render('pages/index', { grams: medias });
+  });
+  // res.render('pages/index', options);
 });
 
 
 // Start server om port 8080
-app.listen(8080);
-console.log('Server listening on port 8080!');
+app.listen(3200);
+console.log('Server listening on port 3200!');

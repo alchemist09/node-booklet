@@ -9,9 +9,33 @@
   </header>
   <main>
   instagram photos will go here
+
+  <div class="row">
+    <% console.log(grams) %>
+    <% grams.forEach(function(gram) { %>
+      <div class="instagram-pic col-sm-3">
+        <a href="<%= gram.link %>" target="_blank">
+          <img src="<%= gram.images.standard_resolution.url %>" />
+        </a>
+
+        <div class="instagram-bar">
+          <div class="likes">
+            <span class="glyphicon glyphicon-heart"></span>
+            <%= gram.likes.count %>
+          </div>
+
+          <div class="comments">
+            <span class="glyphicon glyphicon-comment"></span>
+            <%= gram.comments.count %>
+          </div>
+        </div>
+      </div>
+    <% }); %>
+  </div>
+
   </main>
   <footer>
-  <% include ../partials/footer %>
+    <% include ../partials/footer %>
   </footer>
 </body>
 </html>
